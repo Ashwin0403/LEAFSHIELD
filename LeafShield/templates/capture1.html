@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Shield</title>
+    <link rel="stylesheet" href="{% static 'capture.css' %}">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const messagesDiv = document.getElementById('django-messages');
+            if (messagesDiv) {
+                const messages = messagesDiv.querySelectorAll('.message');
+                setTimeout(() => {
+                    messages.forEach((message) => {
+                        alert(message.textContent);
+                    });
+                }, 100); // Adjust delay if necessary
+            }
+        });
+
+        // Function to preview uploaded image
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function () {
+                const imgElement = document.getElementById('uploaded-image');
+                imgElement.src = reader.result;
+                imgElement.style.display = 'block'; // Show the image
+            }
+
+            reader.readAsDataURL(file);
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-vector/protective-shield-plant-logo-design-natureinspired-vector-graphics_579306-24251.jpg?w=1380" alt="Logo" />
+            <span>LEAF SHIELD</span>
+        </div>
+        <nav>
+            <form class="search-form" action="#" method="GET">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+                <div class="user-info">
+                    <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="User Icon" class="user-icon" />
+                    <span class="user-name">Hello Aman</span>
+                </div>
+            </form>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Leaf Shield</h1>
+        <p>Save the environment with us</p>
+        <p>Easily identify plant diseases with our advanced leaf scanner! Simply upload a picture of the affected plant leaf, and our system will quickly analyze it to detect any potential diseases.</p>
+
+        {% if messages %}
+        <div id="django-messages">
+            {% for message in messages %}
+                <p class="message {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </section>
+
+    <!-- Upload Image Form -->
+    <form class="upload-form" action="{% url 'diseases:predict_disease' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="leaf-image">Choose an image:</label>
+        <input type="file" id="leaf-image" name="leaf-image" accept="image/*" required onchange="previewImage(event)">
+        <button type="submit">Predict</button>
+    </form>
+
+ <!-- Uploaded Image Preview -->
+<div id="image-preview" class="result-container">
+    {% if image_url %}
+    <img id="uploaded-image" src="{{ image_url }}" alt="Uploaded Image">
+    {% else %}
+    <img id="uploaded-image" src="#" alt="Uploaded Image" style="display:none;">
+    {% endif %}
+</div>
+
+
+    <!-- Prediction Result Box -->
+    {% if disease_name %}
+    <div class="prediction-result-box" class="disease-info-box">
+        <p>Disease Detected: <span>{{ disease_name }}</span></p>
+    </div>
+    {% endif %}
+
+
+
+<div class="disease-info">
+    {% if description %}
+        <div class="info-box description-box">
+            <h3>Description</h3>
+            <p>{{ description }}</p>
+        </div>
+    {% endif %}
+
+    {% if prevention %}
+        <div class="info-box prevention-box">
+            <h3>Prevention</h3>
+            <p>{{ prevention }}</p>
+        </div>
+    {% endif %}
+
+    {% if treatment %}
+        <div class="info-box treatment-box">
+            <h3>Treatment</h3>
+            <p>{{ treatment }}</p>
+        </div>
+    {% endif %}
+</div>
+
+
+
+    <script src="{% static 'capture.js' %}"></script>
+</body>
+</html>

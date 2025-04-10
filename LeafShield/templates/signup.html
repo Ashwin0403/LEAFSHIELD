@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leaf Shield</title>
+        <link rel="stylesheet" href="{% static 'signup.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       
+    
+    </head>
+<body>
+
+
+    <header class="header">
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-vector/protective-shield-plant-logo-design-natureinspired-vector-graphics_579306-24251.jpg?w=1380" alt="Logo" />
+            <span>LEAF SHIELD</span>
+        </div>
+        <nav>
+          <i class="fas fa-home"></i>
+          <div class="hover"><a href="{% url 'login:home' %}">Home</a></div> 
+            <form class="search-form" action="#" method="GET">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+</head>
+<body>
+  <div class="login-container">
+    <h2>Sign Up</h2>
+
+    <form id="registrationForm"  method="POST" action="{% url 'login:signup' %}">
+        {% csrf_token %}
+       
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+          </div>
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter First Name" required>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter Last Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email " required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+          </div>
+                      <!-- Password Requirements List -->
+                      <ul class="password-instructions">
+                        <h6>
+                        <li>At least 8 characters long</li>
+                        <li>Use upper and lower case letter </li>
+                        <li>use special characters </li></h6>
+                    </ul>
+        
+          <p class="password-instructions"></p>
+          <button type="submit">Submit</button>
+          <p id="message" class="error-message"></p>
+        </form>
+      </div>
+    
+     
+    </body>
+    </html>
+    
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="{% url 'login:home' %}" class="social-link"><i class="fas fa-home"></i> Home</a>
+            </div  >
+            <div style="display: flex; justify-content: center;color: white;">
+                <h5>Copyright © 2024 Leaf Shield ™. All rights reserved.</h5>
+            </div>
+        </footer>
+        <div id="django-messages" style="display:none;">
+            {% for message in messages %}
+                <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        <script src="{% static 'signup.js' %}"></script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+

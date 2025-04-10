@@ -1,0 +1,511 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+ 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should expand to fill the available space */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.hero {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 50px 20px;
+        text-align: center;
+        background-image: url(' https://wallpapershome.com/images/pages/pic_h/25003.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire section */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        color: white; /* Change text color for better contrast */
+        padding: 50px 20px; /* Padding for the section */
+    
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.images img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.tips {
+    padding: 50px 20px;
+    background-color: #D3D3D3;
+}
+
+.tips h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tips ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tips ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+
+    
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.search-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tips {
+    padding: 50px 20px;
+    background-color: #D3D3D3
+}
+
+.tips-content {
+    display: flex; /* Use flexbox to arrange items side by side */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.images1 img {
+    width: 500px; /* Set a width for the image */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+}
+
+.tips-text {
+    margin-left: 20px; /* Add space between the image and text */
+}
+
+.tips-text h2 {
+    margin-bottom: 20px; /* Space between heading and list */
+}
+
+.tips-text ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+
+}
+
+.tips-text ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1.1em; /* Increase font size for readability */
+    margin-left: 80px;
+}
+
+.hover a:hover{
+  color: #4CAF50;
+}
+ 
+/*this is upload image css*/
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.upload-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.upload-form label {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.upload-form input[type="file"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.upload-form input[type="file"]:hover {
+    border-color: #2e8b57;
+}
+
+.upload-form button {
+    padding: 12px 30px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-form button:hover {
+    background-color: #3fa174;
+}
+
+/* Add subtle transitions for a polished feel */
+.upload-form input[type="file"]:focus {
+    outline: none;
+    border-color: #3fa174;
+}
+
+.upload-form button:active {
+    background-color: #267a4a;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .upload-form {
+        padding: 30px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-form {
+        padding: 20px;
+    }
+
+    .upload-form button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+
+.footer {
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1em;
+}
+
+.footer h5 {
+    margin-bottom: 10px;
+    margin: 0;
+    line-height: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+
+
+/* header profile */
+/* User info section */
+.user-info {
+    display: flex;
+    align-items: center; /* Align the icon and name in the center vertically */
+    margin-left: 20px; /* Adjust spacing from other elements */
+}
+
+.user-icon {
+    width: 40px; /* Set size of the user icon */
+    height: 40px;
+    border-radius: 50%; /* Make the icon circular */
+    margin-right: 10px; /* Add space between the icon and the name */
+    object-fit: cover; /* Ensure the image scales nicely within the circle */
+}
+
+.user-name {
+    font-size: 1em; /* Set font size for the user name */
+    color: #000000; /* Text color */
+    font-weight: bold; /* Make the name bold */
+}
+
+/* Adjustments to make it responsive */
+@media (max-width: 768px) {
+    .user-name {
+        display: none; /* Hide the user name on smaller screens for better layout */
+    }
+
+    .user-icon {
+        width: 30px; /* Adjust icon size for smaller screens */
+        height: 30px;
+    }
+}
+
+
+
+
+/* Center the image and apply styling */
+#image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#uploaded-image {
+    max-width: 80%; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border: 10px solid #4CAF50; /* Border color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+}
+
+#uploaded-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Optional: Add some padding to the image container */
+#image-preview {
+    padding: 20px;
+}
+
+
+
+
+ /* test for slider */
+ /* Prediction Result Box */
+ .prediction-result-box {
+    background-color: #ffffff;
+    border: 2px solid #2e8b57;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+}
+.prediction-result-box span {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Styling for Disease Info Section (Description, Prevention, Treatment) */
+.disease-info {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Info box for each section (Description, Prevention, Treatment) */
+.info-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 8px solid transparent; /* Default transparent border */
+}
+
+/* Hover effect for the info boxes */
+.info-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific styling for each section */
+.description-box {
+    border-left: 8px solid #FFD700; /* Gold color for Description */
+}
+
+.prevention-box {
+    border-left: 8px solid #1E90FF; /* Blue color for Prevention */
+}
+
+.treatment-box {
+    border-left: 8px solid #FF6347; /* Tomato color for Treatment */
+}
+
+/* Heading for each section */
+.info-box h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Paragraph for content */
+.info-box p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Specific styles for each section content */
+.description-box p {
+    color: #333; /* Darker text for description */
+}
+
+.prevention-box p {
+    color: #333; /* Darker text for prevention */
+}
+
+.treatment-box p {
+    color: #333; /* Darker text for treatment */
+}
+
+/* Final Layout Styling */
+.disease-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .prediction-result-box {
+        padding: 20px;
+        font-size: 1.1em;
+    }
+
+    .info-box {
+        padding: 20px;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .info-box h3 {
+        font-size: 1.6em;
+    }
+
+    .info-box p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+

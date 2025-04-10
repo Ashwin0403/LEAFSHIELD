@@ -1,0 +1,317 @@
+.login-container {
+  margin: auto;
+  margin-top: 15%; /* Center the login container */
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Max width for the form */
+  width: 90%; /* Full width on smaller screens */
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfe6e9;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #2c3e50;
+  background-color: #f9f9f9;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #14bc01;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+
+/* this is main page css */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+  background-image: url('https://www.shutterstock.com/image-photo/nature-leaves-green-tropical-forest-600nw-2294556589.jpg');
+
+    font-family: Arial, sans-serif;
+    color: #1b1a1a;
+    background-color: #D3D3D3;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 50px 20px;
+        text-align: center;
+        background-image: url(' https://wallpapershome.com/images/pages/pic_h/25003.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire section */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        color: white; /* Change text color for better contrast */
+        padding: 50px 20px; /* Padding for the section */
+    
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.images img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.tips {
+    padding: 50px 20px;
+    background-color: #D3D3D3;
+}
+
+.tips h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tips ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tips ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+
+    
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.search-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tips {
+    padding: 50px 20px;
+    background-color: #D3D3D3
+}
+
+.tips-content {
+    display: flex; /* Use flexbox to arrange items side by side */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.images1 img {
+    width: 500px; /* Set a width for the image */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+}
+
+.tips-text {
+    margin-left: 20px; /* Add space between the image and text */
+}
+
+.tips-text h2 {
+    margin-bottom: 20px; /* Space between heading and list */
+}
+
+.tips-text ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+
+}
+
+.tips-text ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1.1em; /* Increase font size for readability */
+    margin-left: 80px;
+}
+
+.hover a:hover{
+  color: #4CAF50;
+}
+.rights {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Background color to match the header */
+  padding: 10px 0; /* Spacing around the text */
+  text-align: center;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1); /* Optional shadow for separation */
+}
+
+
+/*  this is icon in bottom*/
+
+/* Footer styles */
+.footer {
+  background-color: #f1f1f100;
+ margin-top: 10%;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+ 
+}
+
+.footer .social-link {
+  text-decoration: none;
+  color: #f8f8f8;
+  margin: 0 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .social-link i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* Adjust hover effect */
+.footer .social-link:hover {
+  border-radius: 10px;
+  padding: 10px;
+  background-color:black
+}
+
+/* Rights Section */
+.rights {
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+}

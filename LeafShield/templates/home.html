@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Shield</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src=" https://img.freepik.com/premium-vector/protective-shield-plant-logo-design-natureinspired-vector-graphics_579306-24251.jpg?w=1380 " alt="Logo" />
+            <span>LEAF SHIELD</span>
+        </div>
+        <nav>
+            
+           <div class="hover"><a href="{% url 'login:login' %}">Login</a>
+        </div>           
+        <div class="hover"><a href="{% url 'login:signup' %}">Create Account</a>
+            
+        </div> 
+
+
+            <form class="search-form" action="#" method="GET">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+            </form>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Leaf Shield</h1>
+        <p>Save the environment with us</p>
+        <p>Easily identify plant diseases with our advanced leaf scanner! Simply upload a picture of the affected plant leaf, and our system will quickly analyze it to detect any potential diseases.</p>
+     <a href="{% url 'login:login' %}"><button>Login</button> </a> 
+    </section>
+
+    <section class="images">
+        <figure>
+            <img src="https://c1.wallpaperflare.com/preview/784/537/276/wine-leaf-smallpox-mite-infestation-green.jpg" alt="Plant Image 1">
+           <h1><figcaption>Vine Leaf Smallpox Mite Infestation</figcaption>
+        </figure></h1> 
+        <figure>
+            <img src="https://c1.wallpaperflare.com/preview/834/126/538/cucumber-leaf-disease.jpg" alt="Plant Image 2">
+            <h1><figcaption>Cucumber Leaf Disease</figcaption>
+        </figure></h1>
+        <figure>
+            <img src="https://c1.wallpaperflare.com/preview/803/162/321/birnbaum-leaves-pear-disease-infestation.jpg" alt="Plant Image 3">
+           <h1> <figcaption>Birnbaum Leaves Pear Disease Infestation</figcaption>
+        </figure></h1>
+    </section>
+    
+
+    <section class="tips">
+        <div class="tips-content">
+            <section class="images1">
+                <img src="https://earthsally.com/wp-content/uploads/2021/03/blackspot-plant-disease.jpg" alt="Black Spot Disease">
+            </section>
+            <div class="tips-text">
+                <h2>Tips for Controlling Black Spots on Leaves</h2>
+                <ul>
+                    <li>Plant in well-draining soil. Keep your plants healthy by providing regular feedings of organic fertilizer.</li>
+                    <li>Remove dead leaves and infected canes from around the plants and discard in the trash.</li>
+                    <li>Disinfect your pruners with a household disinfectant after every use.</li>
+                    <li>Avoid applying water directly to the leaves. Water the roots instead using a soaker hose.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="rights">
+        <div style="display: flex; justify-content: center;">
+          <h5>copyright ©2024 Leaf Shield ™.All Rights Reserved. DESIGNED BY AMAN & TEAM </h5>
+        </div>
+      </section>
+      
+      <script src="{% static 'home.js' %}"></script>
+</body>
+</html>
